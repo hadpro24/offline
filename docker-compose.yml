@@ -1,0 +1,13 @@
+version: "3"
+networks:
+  proxy_https_default:
+    external: true
+services:
+  web:
+    build: .
+    ports:
+      - "7007:7007"
+    volumes:
+      - .:/code
+    networks:
+      - proxy_https_default

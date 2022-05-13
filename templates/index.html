@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Jost:wght@200;400&family=Lobster&family=Raleway:wght@100;300;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='dist/main.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='src/main.js') }}" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Stop VBG - Offline</title>
+    <style>
+    </style>
+</head>
+<body>
+    <main class="p-0">
+
+      <!-- Appel à la formation -->
+      <section class="relative w-screen h-[300px] md:h-[500px]">
+        <div class="video-container h-full overflow-hidden grayscale absolute top-0 left-0 w-full z-0">
+          <video playsinline autoplay muted loop class="h-full w-full object-cover object-center">
+            <source src="{{ url_for('static', filename='src/vid/stop.mp4') }}" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="absolute left-0 top-0 w-full h-full z-10 flex items-center justify-center">
+          <div class="w-76 h-96 text-white flex flex-col items-center justify-center">
+            <h3 class="font-bold text-2xl md:text-4xl mb-12">Nous sommes en maintenance. On revient sous peu -:)</h3>
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+</body>
+</html>
